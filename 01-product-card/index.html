@@ -1,16 +1,105 @@
 <!doctype html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>SpurIT - Тестовое задание 1. HTML и CSS</title>
     <link rel="stylesheet" href="./index.css">
 </head>
+
 <body>
-<main>
-<!-- Напиши разметку на этом месте и больше ничего не трогай -->
-</main>
+    <main>
+        <div class="weekly-products">
+            <h1 class="weekly-products__title">Товары недели</h1>
+            <div class="weekly-products__cards">
+                <div class="weekly-products__cards__item">
+                    <div class="cards__item__tag">
+                        <div class="cards__item__tag__elem cards__item__tag__elem_new">Новинка</div>
+                        <div class="cards__item__tag__elem cards__item__tag__elem_low-stock">Последний</div>
+                    </div>
+                    <div class="cards__item__img">
+                        <img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F43%2F2022%2F01%2F03%2FGettyImages-1205638014-2000.jpg&q=60"
+                            alt="oranges">
+                    </div>
+                    <div class="cards__item__inner">
+                        <h3 class="cards__item__inner__title">Апельсиновый сок</h3>
+                        <p class="cards__item__inner__text">
+                            Он придётся по душе, даже если ты слива лиловая, спелая, садовая.
+                        </p>
+                    </div>
+                    <button class="cards__item__button"><span class="in-stock">В корзину</span><span
+                            class="not-available">Закончился</span></button>
+                </div>
+                <div class="weekly-products__cards__item">
+                    <div class="cards__item__tag">
+                        <div class="cards__item__tag__elem cards__item__tag__elem_new cards__item__tag__elem_disabled">
+                            Новинка</div>
+                        <div
+                            class="cards__item__tag__elem cards__item__tag__elem_low-stock cards__item__tag__elem_disabled">
+                            Последний</div>
+                    </div>
+                    <div class="cards__item__img">
+                        <img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F43%2F2022%2F01%2F03%2FGettyImages-1205638014-2000.jpg&q=60"
+                            alt="oranges">
+                    </div>
+                    <div class="cards__item__inner">
+                        <h3 class="cards__item__inner__title">Апельсиновый сок</h3>
+                        <p class="cards__item__inner__text">
+                            Он придётся по душе, даже если ты слива лиловая, спелая, садовая. Ну что сказать? Ну что
+                            сказать? Устроены так длинные описания.
+                        </p>
+                    </div>
+                    <button class="cards__item__button"><span class="in-stock">В корзину</span><span
+                            class="not-available">Закончился</span></button>
+                </div>
+                <div class="weekly-products__cards__item">
+                    <div class="cards__item__tag">
+                        <div class="cards__item__tag__elem cards__item__tag__elem_new cards__item__tag__elem_disabled">
+                            Новинка</div>
+                        <div
+                            class="cards__item__tag__elem cards__item__tag__elem_low-stock cards__item__tag__elem_disabled">
+                            Последний</div>
+                    </div>
+                    <div class="cards__item__img">
+                        <img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F43%2F2022%2F01%2F03%2FGettyImages-1205638014-2000.jpg&q=60"
+                            alt="oranges">
+                    </div>
+                    <div class="cards__item__inner">
+                        <h3 class="cards__item__inner__title">Апельсиновый сок</h3>
+                        <p class="cards__item__inner__text">
+                            Он придётся по душе, даже если ты слива лиловая, спелая, садовая.
+                        </p>
+                    </div>
+                    <button class="cards__item__button cards__item__button_disabled"><span class="in-stock">В
+                            корзину</span><span class="not-available">Закончился</span></button>
+                </div>
+                <div class="weekly-products__cards__item">
+                    <div class="cards__item__tag">
+                        <div class="cards__item__tag__elem cards__item__tag__elem_new cards__item__tag__elem_disabled">
+                            Новинка</div>
+                        <div
+                            class="cards__item__tag__elem cards__item__tag__elem_low-stock cards__item__tag__elem_disabled">
+                            Последний</div>
+                    </div>
+                    <div class="cards__item__img">
+                        <img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F43%2F2022%2F01%2F03%2FGettyImages-1205638014-2000.jpg&q=60"
+                            alt="oranges">
+                    </div>
+                    <div class="cards__item__inner">
+                        <h3 class="cards__item__inner__title">Апельсиновый сок</h3>
+                        <p class="cards__item__inner__text">
+                            Он придётся по душе, даже если ты слива лиловая, спелая, садовая.
+                        </p>
+                    </div>
+                    <button class="cards__item__button cards__item__button_disabled"><span class="in-stock">В
+                            корзину</span><span class="not-available">Закончился</span></button>
+                </div>
+            </div>
+        </div>
+    </main>
 </body>
+
 </html>
