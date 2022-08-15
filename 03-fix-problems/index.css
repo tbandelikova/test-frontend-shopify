@@ -1,4 +1,38 @@
-body,
+* {
+    margin: 0 auto;
+}
+html, body {
+    font-family: sans-serif;
+    background-color: cornsilk;
+}
+.article {
+    margin-top: 16px;
+    max-width: 680px;
+    padding: 24px;
+}
+.article * {
+    margin-bottom: 1rem;
+}
+.article__heading {
+    color: palevioletred;
+    margin-bottom: 1.5rem;
+}
+.article__lead {
+    font-family: serif;
+    font-weight: 700;
+    font-style: italic;
+    text-transform: uppercase;
+}
+.figure__image {
+    margin-bottom: 8px;
+    width: 100%;
+}
+.figure__caption {
+    font-style: italic;
+    text-align: center;
+}
+
+/* body,
 html:not(div) > head ~ body > * > * > figure > img ~ * {
     margin: 0.0000001em;font-family: sans-serif;font-family: serif;background: cornsilk;
     text-align: center;
@@ -108,4 +142,4 @@ body > main > .article,
 [class="article"] > h1:not(h2, h3, h4, h5, h6) {
     margin: 0 0 1.5rem 0;
     color: palevioletred
-}
+} */
