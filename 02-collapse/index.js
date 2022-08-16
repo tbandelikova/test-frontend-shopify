@@ -4,6 +4,8 @@ let visible = document.querySelector('.collapsible__action--visible');
 let hidden = document.querySelector('.collapsible__action--hidden');
 let content = document.querySelector('.collapsible__content');
 
+//STYLES
+
 let collapseButtonStyle = {
     width: '500px',
     backgroundColor: '#f542a4',
@@ -13,6 +15,7 @@ let collapseButtonStyle = {
     borderRadius: '20px',
     position: 'relative',
     zIndex: '1',
+    cursor: 'pointer',
 }
 
 let contentStyle = {
@@ -28,22 +31,6 @@ let contentStyle = {
     left: '90px',
 }
 
-let contentCollapse = content.animate(
-    [
-        { transform: 'translateX(-150%) scale(0)' },
-        { transform: 'translateX(-50%)' },
-        { transform: 'translateX(0) scale(1)'},
-      ],
-        {
-            duration: 800, 
-            easing: 'ease-in-out',
-            fill: 'both' 
-        }
-);
-contentCollapse.pause();
-
-hidden.style.display = 'none';
-
 let styledButton = Object.entries(collapseButtonStyle).map(([key, value]) => {
     button.style[key] = value;
 });
@@ -52,16 +39,32 @@ let styledContent = Object.entries(contentStyle).map(([key, value]) => {
     content.style[key] = value;
 })
 
+let contentCollapse = content.animate(
+    [
+        { transform: 'translateY(-150%) scale(0)' },
+        { transform: 'translateY(-50%) scale(0)' },
+        { transform: 'translateY(0) scale(1)'},
+      ],
+        {
+            duration: 800, 
+            easing: 'ease-in-out',
+            fill: 'both' 
+        }
+);
 
+hidden.style.display = 'none';
+
+//ACTIONS
 
 function handleClick() {
-    button.innerText === 'Скрыть содержимое' ? contentCollapse.play() : contentCollapse.reverse();
+    button.innerText === 'Скрыть содержимое' ? contentCollapse.play() : contentCollapse.reverse();  
 
     buttonText.forEach((item) => {   
         item.classList.toggle('collapsible__action--hidden');
         item.classList.toggle('collapsible__action--visible');
-        item.style.display = item.classList.contains('collapsible__action--hidden') ? 'none' : 'block';  
+        item.style.display = item.classList.contains('collapsible__action--hidden') ? 'none' : 'block';
     })
+    button.innerText === 'Скрыть содержимое' ? contentCollapse.play() : contentCollapse.reverse();
 }
 
 button.addEventListener('click', () => handleClick());
