@@ -31,13 +31,20 @@ let contentStyle = {
     left: '90px',
 }
 
-let styledButton = Object.entries(collapseButtonStyle).map(([key, value]) => {
-    button.style[key] = value;
-});
+function applyStyles() {
+    hidden.style.display = 'none';
+    Object.entries(collapseButtonStyle).map(([key, value]) => {
+        button.style[key] = value;
+    });
+    
+    Object.entries(contentStyle).map(([key, value]) => {
+        content.style[key] = value;
+    })
+}
 
-let styledContent = Object.entries(contentStyle).map(([key, value]) => {
-    content.style[key] = value;
-})
+applyStyles();
+
+//ANIMATION VARIANTS
 
 let contentCollapse = content.animate(
     [
@@ -46,13 +53,35 @@ let contentCollapse = content.animate(
         { transform: 'translateY(0) scale(1)'},
       ],
         {
-            duration: 800, 
+            duration: 500, 
             easing: 'ease-in-out',
             fill: 'both' 
         }
 );
-
-hidden.style.display = 'none';
+// let opacity = content.animate(
+//     [
+//         { opacity: '0' },
+//         { opacity: '0.5' },
+//         { opacity: '1'},
+//       ],
+//         {
+//             duration: 500, 
+//             easing: 'ease-in-out',
+//             fill: 'both' 
+//         }
+// );
+// let flips = content.animate(
+//     [
+//         { transform: 'translateX(-150%) rotate(-720deg)' },
+//         { transform: 'translateX(-50%) rotate(-360deg)' },
+//         { transform: 'translateX(0)'},
+//       ],
+//         {
+//             duration: 800, 
+//             easing: 'ease-in-out',
+//             fill: 'both' 
+//         }
+// );
 
 //ACTIONS
 
