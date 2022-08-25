@@ -85,6 +85,10 @@ html, body {
     font-weight: 900;
 }
 .cards__item__button {
+    height: 4rem;
+    width: 87%;
+}
+.cards__item__button button {
     cursor: pointer;
     position: absolute;
     bottom: 1.5rem;
@@ -98,15 +102,15 @@ html, body {
     line-height: 1.5;
     padding: 0.94rem 0;
 }
-.cards__item__button .not-available {
+.cards__item__button button .not-available {
     display: none;
 }
-.cards__item__button:hover {
+.cards__item__button button:hover {
     background-color: #42940F;
     color: white;
     transition: 0.5s;
 }
-.cards__item__button:active {
+.cards__item__button button:active {
     background-color: #1F5200;
     color: white;
     border-color: #1F5200;
@@ -114,8 +118,8 @@ html, body {
 .cards__item__tag__elem_disabled {
     display: none;
 }
-.cards__item__button:disabled, 
-.cards__item__button_disabled {
+.cards__item__button button:disabled, 
+.cards__item__button .cards__item__button_disabled {
     cursor: not-allowed;
     background-color: #4E4E4E;
     border-color: #4E4E4E;
@@ -124,7 +128,7 @@ html, body {
     background-color: #4E4E4E;
     border-color: #4E4E4E;
 }
-.cards__item__button_disabled .not-available {
+.cards__item__button .cards__item__button_disabled .not-available {
     display: inline;
     color: white;
 }
