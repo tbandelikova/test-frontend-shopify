@@ -34,8 +34,7 @@ html, body {
     margin: 0 auto;
 }
 .weekly-products__cards__item {
-    height: 30rem;
-    max-width: 380px;
+    min-height: 30rem;
     border-radius: 12px;
     box-shadow: 0px 0px 45px -4px rgba(0, 0, 0, 0.18);
     display: flex;
@@ -88,9 +87,8 @@ html, body {
 .cards__item__button {
     cursor: pointer;
     position: absolute;
-    bottom: 0;
+    bottom: 1.5rem;
     width: 87%;
-    margin-bottom: 1.5rem;
     border: 2px solid #42940F;
     border-radius: 0.5rem;
     text-transform: uppercase;
